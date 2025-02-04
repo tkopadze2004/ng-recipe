@@ -1,3 +1,18 @@
 @if (recipe$|async; as recipe) {
-  
+<div class="details">
+  <img [src]="recipe.image" alt="recipe img" />
+  <div>
+    <h1>{{ recipe.title }}</h1>
+    <ul>
+      @for (ingredient of recipe.ingredients; track ingredient) {
+      <li>
+        {{ ingredient }}
+      </li>
+      }
+    </ul>
+    <span>{{ recipe.description }} </span>
+  </div>
+</div>
+<p>{{ recipe.instructions }}</p>
+
 }
