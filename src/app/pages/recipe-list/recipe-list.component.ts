@@ -3,6 +3,8 @@ import { RecipeService } from '../../services/recipe.service';
 import { AsyncPipe } from '@angular/common';
 import { RecipeCardComponent } from '../../shared/recipe-card/recipe-card.component';
 import { RouterLink } from '@angular/router';
+import { Observable } from 'rxjs';
+import { IRecipe } from '../../core/interfaces/recipe.interface';
 
 @Component({
   selector: 'app-recipe-list',
@@ -13,7 +15,7 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RecipeListComponent {
-  servide = inject(RecipeService);
+  private readonly recipeServide: RecipeService = inject(RecipeService);
 
-  ragac = this.servide.getRecipes();
+  public recipes$: Observable<IRecipe[]> = this.recipeServide.getRecipes();
 }

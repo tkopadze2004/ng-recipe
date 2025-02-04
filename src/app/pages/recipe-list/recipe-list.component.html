@@ -1,13 +1,10 @@
-  <div class="cont">
-    @if (ragac | async ;as rec) {
-      @for (item of rec; track item) {
-        <app-recipe-card
-          [recipeImg]="item.image"
-          [description]="item.description"
-          [title]="item.title"
-          [routerLink]="['/', 'recipes', item.id]"
-        />
-      }
-    }
-  </div>
-
+<div class="cont">
+  @if (recipes$ | async ;as recipes) { @for (recipe of recipes; track recipe) {
+  <app-recipe-card
+    [recipeImg]="recipe.image"
+    [description]="recipe.description"
+    [title]="recipe.title"
+    [routerLink]="['/', 'recipes', recipe.id]"
+  />
+  } }
+</div>
