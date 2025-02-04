@@ -1,3 +1,20 @@
 {
-  "recipes": []
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Chocolate Cake",
+      "description": "Delicious homemade chocolate cake",
+      "ingredients": ["Flour", "Sugar", "Cocoa Powder", "Eggs", "Milk"],
+      "instructions": "Mix ingredients and bake at 180°C for 30 minutes.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "title": "Pasta Carbonara",
+      "description": "Classic Italian pasta",
+      "ingredients": ["Pasta", "Eggs", "Parmesan", "Bacon", "Pepper"],
+      "instructions": "Cook pasta and mix with ingredients.",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
 }
