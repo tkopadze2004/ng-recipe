@@ -1,1 +1,7 @@
-<p>header works!</p>
+<div class="header">
+  <div class="header__left" [routerLink]="'/'">
+    <img src="chef.png" alt="chef img" />
+    <span class="header__left--title">Recipe Space</span>
+  </div>
+  <button mat-flat-button [routerLink]="'add-recipe'">create recepte</button>
+</div>

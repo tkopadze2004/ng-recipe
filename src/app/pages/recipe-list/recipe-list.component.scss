@@ -11,18 +11,18 @@
 
 @media (max-width: 768px) {
   .recipe-card {
-    width: 100%; // On smaller screens, each card takes the full width of the container
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .recipe-card {
-    width: 45%; // Two items per row
+    width: 45%;
   }
 }
 
 @media (min-width: 1024px) {
   .recipe-card {
-    width: 30%; // Three items per row
+    width: 30%;
   }
 }
