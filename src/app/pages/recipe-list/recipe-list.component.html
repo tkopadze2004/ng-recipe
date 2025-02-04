@@ -1,4 +1,13 @@
-<p>recipe-list works!</p>
-@if (ragac|async; as rec) {
-  <div>{{rec}} </div>
-}
+  <div class="cont">
+    @if (ragac | async ;as rec) {
+      @for (item of rec; track item) {
+        <app-recipe-card
+          [recipeImg]="item.image"
+          [description]="item.description"
+          [title]="item.title"
+          [routerLink]="['/', 'recipes', item.id]"
+        />
+      }
+    }
+  </div>
+

@@ -1,1 +1,7 @@
-<p>recipe-card works!</p>
+<div class="recipe-card">
+  <img [src]="recipeImg()" alt="Recipe Image" class="recipe-card__image" />
+  <div class="recipe-card__content">
+    <span class="recipe-card__content--title">{{ title() }}</span>
+    <p class="recipe-card__content--desc">{{ description() }}</p>
+  </div>
+</div>

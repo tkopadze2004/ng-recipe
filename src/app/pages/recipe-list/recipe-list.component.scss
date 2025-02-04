@@ -1,0 +1,28 @@
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1116px;
+}
+
+@media (max-width: 768px) {
+  .recipe-card {
+    width: 100%; // On smaller screens, each card takes the full width of the container
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .recipe-card {
+    width: 45%; // Two items per row
+  }
+}
+
+@media (min-width: 1024px) {
+  .recipe-card {
+    width: 30%; // Three items per row
+  }
+}
