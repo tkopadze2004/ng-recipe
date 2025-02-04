@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-  apiUrl = environment.jsonUrl;
+  jsonUrl = environment.jsonUrl;
 
   http: HttpClient = inject(HttpClient);
 
@@ -14,19 +14,19 @@ export class ApiService {
       fromObject: params,
     });
 
-    return this.http.get<T>(`${this.apiUrl}${path}`, {
+    return this.http.get<T>(`${this.jsonUrl}${path}`, {
       params: httpparams,
     });
   }
   post<T>(path: string, body: any): Observable<T> {
-    return this.http.post<T>(`${this.apiUrl}${path}`, body);
+    return this.http.post<T>(`${this.jsonUrl}${path}`, body);
   }
 
   put<T>(path: string, body: any): Observable<T> {
-    return this.http.put<T>(`${this.apiUrl}${path}`, body);
+    return this.http.put<T>(`${this.jsonUrl}${path}`, body);
   }
 
   delete<T>(path: string): Observable<T> {
-    return this.http.delete<T>(`${this.apiUrl}${path}`);
+    return this.http.delete<T>(`${this.jsonUrl}${path}`);
   }
 }
