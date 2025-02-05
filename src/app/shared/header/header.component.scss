@@ -8,8 +8,8 @@
   width: 100%;
   position: fixed;
   box-sizing: border-box;
-  flex-wrap: nowrap; // Prevent wrapping on mobile
-
+  flex-wrap: nowrap; 
+  z-index: 10;
   &__left {
     cursor: pointer;
     display: flex;

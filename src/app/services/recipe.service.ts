@@ -19,8 +19,8 @@ export class RecipeService extends ApiService {
     return this.post<IRecipe>(`recipes`, recipe);
   }
 
-  updateRecipe(id: number, recipe: IRecipe): Observable<IRecipe> {
-    return this.put<IRecipe>(`recipes/${id}`, recipe);
+  updateRecipe(recipe: IRecipe): Observable<IRecipe> {
+    return this.put<IRecipe>(`recipes/${recipe.id}`, recipe);
   }
 
   deleteRecipe(id: number): Observable<void> {
