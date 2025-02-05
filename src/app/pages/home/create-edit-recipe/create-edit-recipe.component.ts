@@ -7,8 +7,8 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { RecipeService } from '../../services/recipe.service';
-import { IRecipe } from '../../core/interfaces/recipe.interface';
+import { RecipeService } from '../../../services/recipe.service';
+import { IRecipe } from '../../../core/interfaces/recipe.interface';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,7 +18,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, map, Observable, of, switchMap, tap } from 'rxjs';
-import { ImageUploadService } from '../../services/image.service';
+import { ImageUploadService } from '../../../services/image.service';
 @Component({
   selector: 'app-create-edit-recipe',
   standalone: true,
