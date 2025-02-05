@@ -26,3 +26,12 @@
   border-radius: 5px;
   font-size: 16px;
 }
+.search-bar:focus {
+  border-color: rgb(42, 47, 148);
+  outline: none;
+}
+
+.no-results {
+  font-weight: 700;
+  font-size: 20px;
+}

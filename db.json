@@ -3,16 +3,12 @@
     {
       "id": "1",
       "title": "Chocolate Cake",
-      "description": "Delicious homemade chocolate cake",
+      "description": "Delicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cake",
+      "image": "https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg",
       "ingredients": [
-        "Flour",
-        "Sugar",
-        "Cocoa Powder",
-        "Eggs",
-        "Milk"
+        "Flour"
       ],
-      "instructions": "Mix ingredients and bake at 180°C for 30 minutes.",
-      "image": "https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg"
+      "instructions": "Delicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cake"
     },
     {
       "id": "2",
@@ -102,16 +98,6 @@
       ],
       "instructions": "Mix ingredients and bake at 180°C for 30 minutes.",
       "image": "https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg"
-    },
-    {
-      "id": "86507",
-      "title": "we",
-      "description": "we",
-      "image": "https://i.ibb.co/SSfnv0B/clover.png",
-      "ingredients": [
-        "we"
-      ],
-      "instructions": "we"
     }
   ]
 }
