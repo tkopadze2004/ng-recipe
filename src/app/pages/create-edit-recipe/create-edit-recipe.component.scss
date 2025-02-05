@@ -1,0 +1,67 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  &__card {
+    width: 100%;
+    max-width: 700px;
+    &--display {
+      width: 100%;
+    }
+  }
+
+  &__image-upload {
+    display: flex;
+    justify-content: center; /* Centers the uploader horizontally */
+    align-items: center; /* Centers the uploader vertically */
+    gap: 26px; /* Adds space between elements inside */
+    margin: 16px 0;
+    input {
+      cursor: pointer;
+    }
+  }
+
+  &.label {
+    font-weight: bold;
+  }
+
+  &.input[type="file"] {
+    padding: 8px;
+  }
+}
+
+mat-form-field {
+  margin-bottom: 18px;
+}
+
+button {
+  margin-top: 16px;
+}
+
+.add {
+  margin: -10px 0 0;
+}
+
+.remove {
+  text-align: end;
+}
+.delete {
+  text-align: end;
+  margin: -30px 0 10px;
+}
+
+.recept {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+textarea {
+  min-height: 70px;
+}
+mat-form-field {
+  font-size: 15px;
+}

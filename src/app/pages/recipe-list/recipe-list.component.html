@@ -1,10 +1,20 @@
 <div class="cont">
-  @if (recipes$ | async ;as recipes) { @for (recipe of recipes; track recipe) {
-  <app-recipe-card
-    [recipeImg]="recipe.image"
-    [description]="recipe.description"
-    [title]="recipe.title"
-    [routerLink]="['/', 'recipes', recipe.id]"
-  />
-  } }
+  <input type="text" class="search-bar" (input)="onSearch($event)" placeholder="Search recipes..." />
+
+  @if (filteredRecipes$ | async; as recipes) {
+    @for (recipe of recipes; track recipe) {
+      <app-recipe-card
+        [recipeImg]="recipe.image"
+        [description]="recipe.description"
+        [title]="recipe.title"
+        [routerLink]="['/', 'recipes', recipe.id]"
+      />
+    }
+    @empty {
+      araiasdv
+    }
+
+
+  }
+
 </div>
