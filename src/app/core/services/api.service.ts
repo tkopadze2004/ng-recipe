@@ -9,20 +9,17 @@ export class ApiService {
 
   http: HttpClient = inject(HttpClient);
 
-  get<T>(path: string, params?: any): Observable<T> {
-    const httpparams = new HttpParams({
-      fromObject: params,
-    });
-
+  get<T>(path: string, params?: HttpParams): Observable<T> {
+    const httpparams = params || new HttpParams();
     return this.http.get<T>(`${this.jsonUrl}${path}`, {
       params: httpparams,
     });
   }
-  post<T>(path: string, body: any): Observable<T> {
+  post<T>(path: string, body: T): Observable<T> {
     return this.http.post<T>(`${this.jsonUrl}${path}`, body);
   }
 
-  put<T>(path: string, body: any): Observable<T> {
+  put<T>(path: string, body: T): Observable<T> {
     return this.http.put<T>(`${this.jsonUrl}${path}`, body);
   }
 
