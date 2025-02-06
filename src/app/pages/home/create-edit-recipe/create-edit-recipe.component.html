@@ -1,10 +1,18 @@
 <div class="recipe-container">
   @if (recipe$|async ; as recipe) {
-  <span class="recipe-container__title">Edit {{ recipe.title }}</span> }
-  @else{<span class="recipe-container__title">Create Recipe</span>}
-  <form [formGroup]="form" (ngSubmit)="submitForm()" class="form-container">
-    <mat-card class="form-container__card">
-      <mat-form-field appearance="fill" class="form-container__card--display">
+  <span class="recipe-container__title">Edit {{ recipe.title }}</span>
+  } @else {
+  <span class="recipe-container__title">Create Recipe</span>
+  }
+
+  <form
+    [formGroup]="form"
+    (ngSubmit)="submitForm()"
+    class="recipe-container__form"
+  >
+    <mat-card class="recipe-container__form--card">
+      <!-- Title -->
+      <mat-form-field appearance="fill" class="full-width">
         <mat-label>Title</mat-label>
         <input matInput formControlName="title" type="text" />
         @if (form.get('title')?.hasError('required')) {
@@ -12,15 +20,17 @@
         }
       </mat-form-field>
 
-      <mat-form-field appearance="fill" class="form-container__card--display">
+      <!-- Description -->
+      <mat-form-field appearance="fill" class="full-width">
         <mat-label>Description</mat-label>
         <textarea matInput formControlName="description"></textarea>
-        @if ( form.get('description')?.hasError('required')) {
+        @if (form.get('description')?.hasError('required')) {
         <mat-error>Description is required</mat-error>
         }
       </mat-form-field>
 
-      <mat-form-field appearance="fill" class="form-container__card--display">
+      <!-- Instructions -->
+      <mat-form-field appearance="fill" class="full-width">
         <mat-label>Instructions</mat-label>
         <textarea matInput formControlName="instructions"></textarea>
         @if (form.get('instructions')?.hasError('required')) {
@@ -28,45 +38,72 @@
         }
       </mat-form-field>
 
+      <!-- Ingredients -->
       <div formArrayName="ingredients">
-        @for (ingredient of ingredients.controls; track ingredient; let i =
-        $index;) {
-        <div>
-          <mat-form-field
-            appearance="fill"
-            class="form-container__card--display"
-          >
-            <mat-label>Ingredient {{ i + 1 }}</mat-label>
-            <input matInput [formControlName]="i" type="text" />
-            @if (ingredient.hasError('required') ) {
-            <mat-error> Ingredient is required </mat-error>
-            }
-          </mat-form-field>
-          @if (ingredients.length > 1) {
-          <div class="remove">
+        <div class="recipe-container__form--card-ingredients">
+          @for (ingredient of ingredients.controls; track ingredient; let i =
+          $index) {
+          <div class="ingredient-item">
+            <mat-form-field appearance="fill" class="ingredient-field">
+              <mat-label>Ingredient {{ i + 1 }}</mat-label>
+              <input matInput [formControlName]="i" type="text" />
+              @if (ingredient.hasError('required')) {
+              <mat-error>Ingredient is required</mat-error>
+              }
+            </mat-form-field>
+            @if (ingredients.length > 1) {
             <button
               mat-button
               type="button"
               (click)="removeIngredient(i)"
-              class="delete"
+              class="ingredient-item__delete"
             >
-              Remove
+              <mat-icon>close</mat-icon>
             </button>
+            }
           </div>
           }
         </div>
-        }
         <button mat-button type="button" (click)="addIngredient()" class="add">
-          Add Ingredient
+          + Add Ingredient
         </button>
       </div>
 
-      <div class="file-upload">
-        <label for="thumbnail">Thumbnail</label>
-        <input id="thumbnail" type="file" (change)="onFileChange($event)" />
-        @if (imageUrl$|async) {}
+      <div class="recipe-container__form--card-file">
+        <label for="thumbnail" class="custom-file-label">
+          select thumbnail image
+        </label>
+        <input
+          id="thumbnail"
+          type="file"
+          (change)="onFileChange($event)"
+          class="hidden-input"
+        />
+
+        @if (isLoading) {
+        <div class="loading-spinner">
+          <mat-spinner [diameter]="30" [strokeWidth]="4"></mat-spinner>
+        </div>
+        }
+        
+        @if (form.value.image) {
+        <div class="image-preview">
+          <img [src]="form.value.image" alt="Recipe Image" />
+          <button type="button" mat-icon-button (click)="deleteImage()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+        }
       </div>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="this.form.invalid"
+      >
+        Submit
+      </button>
     </mat-card>
   </form>
 </div>

@@ -15,5 +15,9 @@
     [title]="recipe.title"
     [routerLink]="['/', 'recipes', recipe.id]"
   />
-  } @empty { <span class="no-results">No results for {{ searchItem }}</span> } }
+  } @empty {
+  <span class="results"
+    >No results for <span class="results__item">{{ searchItem }}</span></span
+  >
+  } }
 </div>

@@ -32,7 +32,11 @@
   outline: none;
 }
 
-.no-results {
-  font-weight: 700;
+.results {
   font-size: 20px;
+  font-weight: 500;
+  &__item {
+    font-weight: 600;
+    font-style: italic;
+  }
 }
