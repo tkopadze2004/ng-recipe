@@ -34,7 +34,7 @@
         <mat-label>Instructions</mat-label>
         <textarea matInput formControlName="instructions"></textarea>
         @if (form.get('instructions')?.hasError('required')) {
-        <mat-error>Instructions are required</mat-error>
+        <mat-error>Instruction are required</mat-error>
         }
       </mat-form-field>
 
@@ -58,7 +58,7 @@
               (click)="removeIngredient(i)"
               class="ingredient-item__delete"
             >
-              <mat-icon>close</mat-icon>
+              <mat-icon>delete</mat-icon>
             </button>
             }
           </div>
@@ -84,9 +84,7 @@
         <div class="loading-spinner">
           <mat-spinner [diameter]="30" [strokeWidth]="4"></mat-spinner>
         </div>
-        }
-        
-        @if (form.value.image) {
+        } @if (form.value.image) {
         <div class="image-preview">
           <img [src]="form.value.image" alt="Recipe Image" />
           <button type="button" mat-icon-button (click)="deleteImage()">

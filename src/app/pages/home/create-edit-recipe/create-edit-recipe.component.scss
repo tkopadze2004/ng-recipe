@@ -4,7 +4,6 @@
   margin-bottom: 10px;
   gap: 7px;
 
-
   &__title {
     font-size: 30px;
     font-weight: 700;
@@ -44,11 +43,7 @@
             height: 24px;
 
             mat-icon {
-              font-size: 20px;
-              line-height: 1;
-            }
-            &:hover {
-              background: none !important;
+              font-size: 17px;
             }
           }
         }

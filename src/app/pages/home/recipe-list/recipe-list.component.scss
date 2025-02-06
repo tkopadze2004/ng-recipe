@@ -10,14 +10,6 @@
   width: 100%;
 }
 
-@media (max-width: 1024px) {
-  .cont {
-    justify-content: space-evenly;
-  }
-  .recipe-card {
-    width: 30%;
-  }
-}
 .search-bar {
   width: 100%;
   padding: 10px;
@@ -38,5 +30,19 @@
   &__item {
     font-weight: 600;
     font-style: italic;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cont {
+    justify-content: space-evenly;
+  }
+  .recipe-card {
+    width: 30%;
+  }
+
+  .search-bar {
+    width: 86%;
+    margin: 0 auto 24px;
   }
 }
