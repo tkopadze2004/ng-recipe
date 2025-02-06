@@ -23,10 +23,30 @@
     flex: 1;
     min-width: 300px;
 
-    &--title {
-      font-size: 50px;
+    &--header {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+
+      &-title {
+        font-size: 50px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      &-actions {
+        display: flex;
+        gap: 10px;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
       margin-bottom: 10px;
-      font-weight: 700;
+      padding-bottom: 5px;
+      width: 60%;
+      border-bottom: 2px solid #2a2f94;
     }
 
     &--ingredients {
@@ -44,41 +64,60 @@
         font-size: 1.2em;
       }
     }
+    &--description {
+      font-size: 18px;
+      line-height: 1.6;
+    }
   }
-  .raf{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    width: 60%;
-    border-bottom: 2px solid #2a2f94;
-  }
-
-  &__buttons{
-    display: flex;
-    gap: 10px;
-  }
-
-  &__description {
-    font-size: 18px;
-    line-height: 1.6;
+  &__instruction {
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 15px;
+    }
   }
 }
 
-.instructions {
-  p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-top: 15px;
+@media (max-width: 1024px) {
+  .recipe {
+    gap: 25px;
+    padding: 0 10px;
+
+    &__details {
+      &--header {
+        &-title {
+          font-size: 39px;
+        }
+        &-actions {
+          gap: 5px;
+          button {
+            width: 70px;
+            height: 30px;
+          }
+        }
+      }
+      h3 {
+        font-size: 18px;
+        width: 100%;
+      }
+
+      &--ingredients {
+        ul {
+          gap: 5px;
+        }
+      }
+    }
+    &__instruction {
+      padding: 0 10px;
+
+      p {
+        font-size: 16px;
+        line-height: 1.2;
+      }
+    }
   }
 }
+
 @media (max-width: 769px) {
   .recipe {
     padding: 0 10px;
@@ -87,10 +126,15 @@
 
     &__details {
       width: 100%;
-      &--title {
-        font-size: 39px;
+      &--header {
+        &-title {
+          font-size: 27px;
+        }
       }
 
+      h3 {
+        padding-bottom: 20px;
+      }
       &--ingredients {
         ul {
           gap: 7px;
@@ -100,39 +144,18 @@
         }
       }
     }
-    h3 {
-      font-size: 18px;
-      width: 100%;
-    }
 
     &__image {
       max-width: 100%;
       width: 100%;
     }
-  }
-  .instructions {
-    padding: 0 10px;
+    &__instruction {
+      padding: 0 10px;
 
-    p {
-      font-size: 16px;
-      line-height: 1.2;
+      p {
+        font-size: 16px;
+        line-height: 1.2;
+      }
     }
   }
-  // .recipe__details {
-  //   min-width: unset;
-  //   width: 90%;
-  // }
-
-  // .recipe__details--title {
-  //   font-size: 28px;
-  // }
-
-  // .recipe__details--ingredients ul {
-  //   grid-template-columns: 1fr;
-  // }
-
-  // .instructions {
-  //   font-size: 16px;
-  //   text-align: justify;
-  // }
 }
