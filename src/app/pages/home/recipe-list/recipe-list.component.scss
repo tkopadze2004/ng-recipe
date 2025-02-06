@@ -21,13 +21,14 @@
 .search-bar {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
+  margin-bottom: 24px;
+  border: 1px solid #d6d6d6;
+  background: whitesmoke;
   border-radius: 5px;
   font-size: 16px;
 }
 .search-bar:focus {
-  border-color: rgb(42, 47, 148);
+  border-color: #b8b8b8;
   outline: none;
 }
 

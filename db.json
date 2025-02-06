@@ -3,7 +3,7 @@
     {
       "id": "1",
       "title": "Chocolate Cake",
-      "description": "Delicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cake",
+      "description": "Delicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate cakeDelicious homemade chocolate ",
       "image": "https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg",
       "ingredients": [
         "Flour"
@@ -98,6 +98,21 @@
       ],
       "instructions": "Mix ingredients and bake at 180°C for 30 minutes.",
       "image": "https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg"
+    },
+    {
+      "id": "18206",
+      "title": "Birthday cake",
+      "description": "so delicious cake for Hbd",
+      "image": "https://i.ibb.co/v4D1cWxB/sm.jpg",
+      "ingredients": [
+        "egs",
+        "suger",
+        "soda",
+        "pkvili",
+        "marili",
+        "sdsdsd"
+      ],
+      "instructions": "you shoud crucj eggs and bake you shoud crucj eggs and bake you shoud crucj eggs and bake you shoud crucj eggs and bake you shoud crucj eggs and bake you shoud crucj eggs and bake "
     }
   ]
 }
