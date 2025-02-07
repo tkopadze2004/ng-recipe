@@ -1,4 +1,4 @@
-# Recipe Sharing Application
+# Recipe Sharing Application 🚀
 
 ## Overview
 
@@ -52,6 +52,7 @@ The Recipe Sharing Application is a web application built with Angular 18 that a
 
 - Form validation ensures all required fields are correctly filled before submission.
 - Displays appropriate error messages when needed.
+- Error handling includes displaying an error message via a Snackbar.
 
 ## Technical Details
 
@@ -68,7 +69,7 @@ The Recipe Sharing Application is a web application built with Angular 18 that a
 - **Recipe Details:** Shows individual recipe information.
 - **Recipe Form:** Handles adding/editing recipes.
 - **Shared Card Component:** Displays individual recipe items.
-- Data Flow: Uses `Input()` and `Output()` signals for data flow between components.
+- Data Flow: Uses `input()` and `output()` signals for data flow between components.
 
 ### 3. Services
 
@@ -130,6 +131,6 @@ http://localhost:4200
 
 - The application follows Angular best practices for maintainability and scalability.
 - The UI is built using Angular Material for a clean and intuitive design.
-- ImgBB API: The application uploads images to the [ImgBB API](https://imgbb.com/) and receives a link for each uploaded image. Visit their website for more details."
+- ImgBB API: The application uploads images to the [ImgBB API](https://imgbb.com/) and receives a link for each uploaded image. Visit their website for more details.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page. 🚀🚀
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page. 🔥 🔥
