@@ -34,7 +34,6 @@
         margin-bottom: 10px;
         font-weight: 700;
         color: rgb(42, 86, 148);
-
       }
       &-actions {
         display: flex;
@@ -47,7 +46,7 @@
       font-weight: bold;
       margin-bottom: 10px;
       padding-bottom: 10px;
-      width: 62%;
+      width: 100%;
       border-bottom: 2px solid #2a2f94;
     }
 
@@ -109,17 +108,25 @@
       &--ingredients {
         ul {
           gap: 5px;
+
+  font-size: 13px;
+          li::marker {
+            font-size: 16px;
+
+          }
         }
       }
       &--description {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
     &__instruction {
       padding: 0 10px;
-
+      h1{
+        font-size: 24px;
+      }
       p {
-        font-size: 16px;
+        font-size: 15px;
       }
     }
   }
@@ -140,11 +147,13 @@
       }
 
       h3 {
-        padding-bottom: 20px;
+        padding-bottom: 10px;
       }
       &--ingredients {
         ul {
           gap: 7px;
+          font-size: 12px;
+
         }
         li::marker {
           font-size: 14px;
@@ -157,8 +166,9 @@
       width: 100%;
     }
     &__instruction {
+
       p {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
   }

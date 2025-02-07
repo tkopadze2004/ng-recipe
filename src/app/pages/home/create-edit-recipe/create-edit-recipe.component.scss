@@ -16,7 +16,7 @@
 
     &--card {
       width: 100%;
-      max-width: 650px;
+      max-width: 660px;
       padding: 20px;
       &-ingredients {
         display: grid;
@@ -99,6 +99,11 @@
   .form-container__card {
     max-width: 100%;
     padding: 15px;
+
+
+  }
+  .recipe-container__form--card-file{
+    margin: 20px  auto 20px;
   }
 
   .ingredients-grid {

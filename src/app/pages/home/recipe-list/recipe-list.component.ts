@@ -38,7 +38,7 @@ export class RecipeListComponent {
           recipe.ingredients.some((ingredient) =>
             ingredient.toLowerCase().includes(query.toLowerCase())
           )
-      )
+      ).reverse()
     )
   );
 
