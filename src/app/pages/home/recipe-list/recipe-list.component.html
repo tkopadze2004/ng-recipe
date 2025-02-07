@@ -16,7 +16,8 @@
     [recipeImg]="recipe.image"
     [description]="recipe.description"
     [title]="recipe.title"
-    [routerLink]="['/', 'recipes', recipe.id]"
+    [id]="recipe.id"
+    (recipeClicked)="onRecipeClick($event)"
   />
   }
 

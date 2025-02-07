@@ -23,31 +23,38 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class RecipeDetailsComponent implements OnDestroy {
   private readonly recipeService = inject(RecipeService);
   private readonly activatedroute = inject(ActivatedRoute);
-  private router = inject(Router);
-  private snackBar = inject(MatSnackBar);
+  private router: Router = inject(Router);
+  private snackBar: MatSnackBar = inject(MatSnackBar);
   private readonly sub$ = new Subject();
 
+  //Fetches the recipe details based on the recipe ID from the URL parameters.
   public recipe$: Observable<IRecipe> = this.activatedroute.params.pipe(
     switchMap((params) => this.recipeService.getRecipeById(params['id']))
   );
 
-  delete(id: any) {
+  /*
+   * Delete  recipe by ID.
+   * After deletion, displays a confirmation message and redirects to the home page.
+   */
+  public delete(id: string) {
     this.recipeService
       .deleteRecipe(id)
       .pipe(takeUntil(this.sub$))
       .subscribe(() => {
         this.openSnackBar('Recipe deleted successfully!');
-
         this.router.navigate(['/']);
       });
   }
 
-  openSnackBar(message: string): void {
+  // Displays a message using Angular Material Snackbar
+  private openSnackBar(message: string): void {
     this.snackBar.open(message, '', {
       duration: 5000,
       panelClass: 'popup',
     });
   }
+
+  // Cleanup subscriptions
   public ngOnDestroy(): void {
     this.sub$.next(null);
     this.sub$.complete();
