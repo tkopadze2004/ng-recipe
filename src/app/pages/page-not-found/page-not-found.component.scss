@@ -1,0 +1,15 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    width: clamp(250px, 50%, 500px);
+  }
+
+  span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
