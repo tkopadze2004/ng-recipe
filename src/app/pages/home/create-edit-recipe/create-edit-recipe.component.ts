@@ -25,6 +25,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ActivatedRoute, Data, Router } from '@angular/router';
 import {
   catchError,
+  finalize,
   map,
   Observable,
   of,
@@ -110,25 +111,18 @@ export class CreateEditRecipeComponent implements OnDestroy {
           }
         }),
         catchError((error) => {
-          this.openSnackBar(`${error.message}, try again later!`);
-          return throwError(() => error.message);
+          this.openSnackBar(
+            `${error?.message || 'Upload failed'}, try again later!`
+          );
+          return throwError(() => new Error(error?.message || 'Unknown error'));
+        }),
+        finalize(() => {
+          this.isLoading = false;
+          this.cdr.detectChanges();
         }),
         takeUntil(this.sub$)
       )
-      .subscribe({
-        next: (data) => {
-          this.isLoading = false;
-          this.cdr.detectChanges();
-        },
-        error: (err) => {
-          this.isLoading = false;
-          this.cdr.detectChanges();
-        },
-        complete: () => {
-          this.isLoading = false;
-          this.cdr.detectChanges();
-        },
-      });
+      .subscribe();
   }
 
   // Clears the image field
