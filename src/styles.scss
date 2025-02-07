@@ -57,6 +57,7 @@ body {
   background-color: whitesmoke;
   font-family: "Poppins", sans-serif;
 }
+// Custom styles for Angular Material icon buttons
 .mat-mdc-icon-button:hover .mat-mdc-button-persistent-ripple::before {
   opacity: 1;
   background: none;
@@ -68,30 +69,38 @@ body {
   font-size: 22px;
   padding: 0;
 }
-
+// Popup styles with rounded corners and centered text
 .popup {
   text-align: center;
   border-radius: 8px;
 }
+// Customize snack bar for mobile (handset) view
 .mat-mdc-snack-bar-handset .mat-mdc-snackbar-surface {
   max-width: 0 !important;
 }
 
+// Style the snack bar surface in desktop view
 .mat-mdc-snack-bar-container .mdc-snackbar__surface {
   min-width: 260px !important;
   box-shadow: none !important;
 }
+
+// Set background color for snack bar container
 .mat-mdc-snack-bar-container .mat-mdc-snackbar-surface {
   background-color: rgb(42, 86, 148) !important;
 }
 
+// Style the text inside the snack bar
 .mat-mdc-snack-bar-container .mdc-snackbar__label {
   font-size: 16px !important;
 }
 
+// Set padding for the snack bar text.
 .mdc-snackbar__label {
   padding: 10px !important;
 }
+
+// Remove right margin from icons inside buttons
 .mat-mdc-button > .mat-icon {
   margin-right: 0 !important;
 }

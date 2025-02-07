@@ -1,7 +1,11 @@
 <div class="recipe-card">
+  <!-- Recipe image, dynamically set the source -->
   <img [src]="recipeImg()" alt="Recipe Image" class="recipe-card__image" />
+
   <div class="recipe-card__content">
+    <!-- Recipe title, dynamically rendered -->
     <span class="recipe-card__content--title">{{ title() }}</span>
+    <!-- Recipe description, dynamically rendered -->
     <p class="recipe-card__content--desc">{{ description() }}</p>
   </div>
 </div>

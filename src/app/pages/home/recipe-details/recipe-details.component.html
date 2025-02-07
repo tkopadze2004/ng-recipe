@@ -1,22 +1,31 @@
 @if (recipe$ | async; as recipe) {
+<!-- Recipe container -->
 <div class="recipe">
+  <!-- Recipe Image Section -->
   <div class="recipe__image">
     <img [src]="recipe.image" alt="Recipe Image" />
   </div>
+
+  <!-- Recipe Details -->
   <div class="recipe__details">
+    <!-- Recipe Header: Title and Action Buttons -->
     <div class="recipe__details--header">
       <span class="recipe__details--header-title">{{ recipe.title }}</span>
       <div class="recipe__details--header-actions">
+        <!-- Edit Recipe Button -->
         <button mat-raised-button [routerLink]="['/edit-recipe', recipe.id]">
           Edit
         </button>
-
+        <!-- Delete Recipe Button -->
         <button mat-flat-button (click)="delete(recipe.id)">delete</button>
       </div>
     </div>
-    <p class="recipe__details--description">{{ recipe.description }}</p>
-    <h3>Ingredients:</h3>
 
+    <!-- Recipe Description -->
+    <p class="recipe__details--description">{{ recipe.description }}</p>
+
+    <!-- Ingredients List -->
+    <h3>Ingredients:</h3>
     <div class="recipe__details--ingredients">
       <ul>
         @for (ingredient of recipe.ingredients; track ingredient) {
@@ -26,9 +35,10 @@
     </div>
   </div>
 </div>
+
+<!-- Recipe Instructions -->
 <div class="recipe__instruction">
   <h1>Instruction:</h1>
   <p>{{ recipe.instructions }}</p>
 </div>
-
 }

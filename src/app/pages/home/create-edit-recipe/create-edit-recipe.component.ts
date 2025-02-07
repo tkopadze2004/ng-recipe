@@ -66,6 +66,8 @@ export class CreateEditRecipeComponent implements OnDestroy {
   private readonly cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
   public isLoading: boolean = false;
   private readonly sub$ = new Subject();
+
+  // Set up the form with the necessary fields and validations rules
   public form: FormGroup = new FormGroup({
     id: new FormControl(''),
     title: new FormControl('', Validators.required),
@@ -75,17 +77,22 @@ export class CreateEditRecipeComponent implements OnDestroy {
     image: new FormControl('', Validators.required),
   });
 
+  // Getter for easier access to ingredients array
   public get ingredients(): FormArray {
     return this.form.get('ingredients') as FormArray;
   }
 
+  // Adds a new ingredient field
   public addIngredient(): void {
     this.ingredients.push(new FormControl('', Validators.required));
   }
+
+  // Removes an ingredient field by index
   public removeIngredient(index: number): void {
     this.ingredients.removeAt(index);
   }
 
+  // Handles file upload and updates form with image URL
   public onFileChange(event: any): void {
     const file = event.target.files[0];
     if (!file) return;
@@ -124,10 +131,12 @@ export class CreateEditRecipeComponent implements OnDestroy {
       });
   }
 
+  // Clears the image field
   public deleteImage(): void {
     this.form.patchValue({ image: '' });
   }
 
+  // Fetches recipe details if editing an existing recipe
   public recipe$: Observable<IRecipe> = this.activatedRoute.params.pipe(
     map((params) => params['id']),
     switchMap((id) => {
@@ -148,8 +157,10 @@ export class CreateEditRecipeComponent implements OnDestroy {
     })
   );
 
+  // Handles form submission for adding or updating a recipe
   public submitForm(): void {
     this.form.markAllAsTouched();
+    if (this.form.invalid) return;
 
     const { id, title, description, image, ingredients, instructions } =
       this.form.value;
@@ -177,7 +188,6 @@ export class CreateEditRecipeComponent implements OnDestroy {
         });
     } else {
       const randomid = Math.round(Math.random() * 100000);
-
       this.recipeService
         .addRecipe({
           id: String(randomid),
@@ -201,12 +211,15 @@ export class CreateEditRecipeComponent implements OnDestroy {
     }
   }
 
+  // Displays a message using Angular Material Snackbar
   private openSnackBar(message: string): void {
     this.snackBar.open(message, '', {
       duration: 5000,
       panelClass: 'popup',
     });
   }
+
+  // Cleanup subscriptions
   public ngOnDestroy(): void {
     this.sub$.next(null);
     this.sub$.complete();

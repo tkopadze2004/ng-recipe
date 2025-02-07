@@ -1,7 +1,10 @@
 <div class="recipe-container">
+  <!-- Check if recipe$ has a value -->
   @if (recipe$|async ; as recipe) {
+  <!-- If recipe$ has a value, show the title for editing -->
   <span class="recipe-container__title">Edit {{ recipe.title }}</span>
   } @else {
+  <!-- If recipe$ doesn't have a value, show the create recipe title -->
   <span class="recipe-container__title">Create Recipe</span>
   }
 
@@ -11,7 +14,7 @@
     class="recipe-container__form"
   >
     <mat-card class="recipe-container__form--card">
-      <!-- Title -->
+      <!-- Title input field with validation -->
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Title</mat-label>
         <input matInput formControlName="title" type="text" />
@@ -20,7 +23,7 @@
         }
       </mat-form-field>
 
-      <!-- Description -->
+      <!-- Description input field with validation -->
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Description</mat-label>
         <textarea matInput formControlName="description"></textarea>
@@ -29,7 +32,7 @@
         }
       </mat-form-field>
 
-      <!-- Instructions -->
+      <!-- Cooking Instructions input field with validation -->
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Cooking Instruction</mat-label>
         <textarea matInput formControlName="instructions"></textarea>
@@ -38,7 +41,7 @@
         }
       </mat-form-field>
 
-      <!-- Ingredients -->
+      <!-- Ingredients input fields with dynamic add/remove functionality -->
       <div formArrayName="ingredients">
         <div class="recipe-container__form--card-ingredients">
           @for (ingredient of ingredients.controls; track ingredient; let i =
@@ -51,6 +54,8 @@
               <mat-error>Ingredient is required</mat-error>
               }
             </mat-form-field>
+
+            <!-- Remove ingredient button, only shown if more than one ingredient exists -->
             @if (ingredients.length > 1) {
             <button
               mat-button
@@ -64,11 +69,14 @@
           </div>
           }
         </div>
+
+        <!-- Button to add new ingredient field -->
         <button mat-button type="button" (click)="addIngredient()" class="add">
           + Add Ingredient
         </button>
       </div>
 
+      <!-- Image upload section -->
       <div class="recipe-container__form--card-file">
         <label for="thumbnail" class="custom-file-label">
           select thumbnail image
@@ -80,11 +88,15 @@
           class="hidden-input"
         />
 
-        @if (isLoading) {
+        <!-- Display loading spinner while image is uploading -->
+        @if (isLoading===true) {
         <div class="loading-spinner">
           <mat-spinner [diameter]="30" [strokeWidth]="4"></mat-spinner>
         </div>
-        } @if (form.value.image) {
+        }
+
+        <!-- Display image preview after successful upload -->
+        @if (form.value.image) {
         <div class="image-preview">
           <img [src]="form.value.image" alt="Recipe Image" />
           <button type="button" mat-icon-button (click)="deleteImage()">
@@ -94,6 +106,7 @@
         }
       </div>
 
+      <!-- Submit button, disabled if form is invalid -->
       <button
         mat-raised-button
         color="primary"

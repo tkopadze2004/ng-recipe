@@ -1,4 +1,5 @@
 <div class="cont">
+  <!-- Search bar for filtering recipes -->
   <input
     type="text"
     class="search-bar"
@@ -7,17 +8,22 @@
     placeholder="Search recipes..."
   />
 
+  <!-- Display the list of recipes -->
   @if (filteredRecipes$ | async; as recipes) { @for (recipe of recipes; track
   recipe) {
+  <!-- Recipe card component displaying each recipe -->
   <app-recipe-card
     [recipeImg]="recipe.image"
     [description]="recipe.description"
     [title]="recipe.title"
     [routerLink]="['/', 'recipes', recipe.id]"
   />
-  } @empty {
-  <span class="results"
-    >No results for <span class="results__item">{{ searchItem }}</span></span
-  >
+  }
+
+  <!-- Show message when no recipes match the search query -->
+  @empty {
+  <span class="results">
+    No results found for <span class="results__item">{{ searchItem }}</span>
+  </span>
   } }
 </div>
