@@ -4,45 +4,38 @@
   justify-content: space-between;
   width: 100%;
   gap: 10px;
-}
 
-.recipe-card {
-  width: 100%;
-}
+  &__search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 24px;
+    border: 1px solid #d6d6d6;
+    background: whitesmoke;
+    border-radius: 5px;
+    font-size: 16px;
+    &:focus {
+      border-color: #b8b8b8;
+      outline: none;
+    }
+  }
 
-.search-bar {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 24px;
-  border: 1px solid #d6d6d6;
-  background: whitesmoke;
-  border-radius: 5px;
-  font-size: 16px;
-}
-.search-bar:focus {
-  border-color: #b8b8b8;
-  outline: none;
-}
-
-.results {
-  font-size: 20px;
-  font-weight: 500;
-  &__item {
-    font-weight: 600;
-    font-style: italic;
+  &__results {
+    font-size: 20px;
+    font-weight: 500;
+    &--item {
+      font-weight: 600;
+      font-style: italic;
+    }
   }
 }
 
 @media (max-width: 1024px) {
   .cont {
     justify-content: space-evenly;
-  }
-  .recipe-card {
-    width: 30%;
-  }
 
-  .search-bar {
-    width: 86%;
-    margin: 0 auto 24px;
+    &__search-bar {
+      width: 86%;
+      margin: 0 auto 24px;
+    }
   }
 }

@@ -2,7 +2,7 @@
   <!-- Search bar for filtering recipes -->
   <input
     type="text"
-    class="search-bar"
+    class="cont__search-bar"
     [(ngModel)]="searchItem"
     (input)="onSearch($event)"
     placeholder="Search recipes..."
@@ -23,8 +23,9 @@
 
   <!-- Show message when no recipes match the search query -->
   @empty {
-  <span class="results">
-    No results found for <span class="results__item">{{ searchItem }}</span>
+  <span class="cont__results">
+    No results found for
+    <span class="cont__results--item">{{ searchItem }}</span>
   </span>
   } }
 </div>

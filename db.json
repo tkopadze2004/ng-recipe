@@ -3,7 +3,7 @@
     {
       "id": "28940",
       "title": "Chicken Sandwich",
-      "description": "Fresh tomatoes, basil, mozzarella, and juicy chicken equals summer on a bun.\n\n",
+      "description": "Fresh tomatoes, basil equals summer on a bun.",
       "image": "https://i.ibb.co/99BcWLcN/sandwich.webp",
       "ingredients": [
         "2 tablespoons olive oil",
@@ -21,7 +21,7 @@
     {
       "id": "37162",
       "title": "Tiramisu Cake",
-      "description": "This gorgeous two-layer cake is a tiramisu lover’s dream. The fluffy mascarpone and Marsala filling uses instant vanilla pudding to help the stacked cake stand strong. Genius!\n",
+      "description": "This cake is a tiramisu dream. Sweet and delicious.",
       "image": "https://i.ibb.co/1GWzZQx6/Tiramisu.webp",
       "ingredients": [
         "3 egg yolks",
@@ -38,7 +38,7 @@
     {
       "id": "37527",
       "title": "Homemade Pizza",
-      "description": "Make perfect pizza at home with this pizza recipe, including an easy pizza dough recipe.",
+      "description": "Make perfect pizza at home with this recipe.\n",
       "image": "https://i.ibb.co/ZpMfKNRw/pizza.webp",
       "ingredients": [
         "1/2 warm water ",
@@ -79,8 +79,8 @@
     {
       "id": "12268",
       "title": "Ice Cream Cake",
-      "description": "This easy copycat Dairy Queen ice cream cake is perfect for any celebration!",
-      "instructions": "Preheat the oven to 350°F. Line a sheet tray with parchment paper and set it aside. Prepare an 8x3-inch springform pan with plastic wrap on the bottom and sides. Let the chocolate ice cream soften for 15-20 minutes, then scoop it into the pan, smoothing it with a spatula. Freeze for 30 minutes. For the Oreo crunchies, combine Oreo crumbs and melted butter, then bake on the sheet tray for 10 minutes. Let the mixture cool completely. To make the fudge, heat the cream in a pot until it bubbles, then pour over the chocolate chips. Let it sit for 1 minute, stir in butter and vanilla, and mix until smooth. Pour the fudge over the frozen ice cream layer and freeze for 10 minutes. Sprinkle the cooled Oreo crunchies over the fudge and gently press them down. Freeze for 1 hour. Let the vanilla ice cream soften for 20 minutes, scoop it onto the crunchies, and smooth the top. Freeze for at least 6 hours. To make the whipped cream frosting, whip the cream, powdered sugar, and vanilla until stiff peaks form. Chill a plate for 10 minutes, then unlock the springform pan, remove the plastic wrap, and transfer the cake to the chilled plate. Frost with most of the whipped cream, leaving 1 cup for decoration. Pipe rosettes with the remaining whipped cream and add rainbow sprinkles. Freeze the cake for 20-30 minutes before serving.",
+      "description": "This easy copycat Dairy Queen cake is perfect for!\n\n\n\n\n\n\n\n",
+      "image": "https://i.ibb.co/zTBgkC4F/ice-cream.webp",
       "ingredients": [
         " 1/2 pints chocolate ice cream",
         "1/2 pints French vanilla ice cream",
@@ -93,7 +93,7 @@
         "1/2 teaspoon vanilla extract",
         "Rainbow dot sprinkles"
       ],
-      "image": "https://i.ibb.co/zTBgkC4F/ice-cream.webp"
+      "instructions": "Preheat the oven to 350°F. Line a sheet tray with parchment paper and set it aside. Prepare an 8x3-inch springform pan with plastic wrap on the bottom and sides. Let the chocolate ice cream soften for 15-20 minutes, then scoop it into the pan, smoothing it with a spatula. Freeze for 30 minutes. For the Oreo crunchies, combine Oreo crumbs and melted butter, then bake on the sheet tray for 10 minutes. Let the mixture cool completely. To make the fudge, heat the cream in a pot until it bubbles, then pour over the chocolate chips. Let it sit for 1 minute, stir in butter and vanilla, and mix until smooth. Pour the fudge over the frozen ice cream layer and freeze for 10 minutes. Sprinkle the cooled Oreo crunchies over the fudge and gently press them down. Freeze for 1 hour. Let the vanilla ice cream soften for 20 minutes, scoop it onto the crunchies, and smooth the top. Freeze for at least 6 hours. To make the whipped cream frosting, whip the cream, powdered sugar, and vanilla until stiff peaks form. Chill a plate for 10 minutes, then unlock the springform pan, remove the plastic wrap, and transfer the cake to the chilled plate. Frost with most of the whipped cream, leaving 1 cup for decoration. Pipe rosettes with the remaining whipped cream and add rainbow sprinkles. Freeze the cake for 20-30 minutes before serving."
     },
     {
       "id": "34029",
@@ -115,7 +115,7 @@
     {
       "id": "50820",
       "title": "Iced coffee",
-      "description": "Smooth Iced coffee",
+      "description": "Delicious smooth iced coffee.",
       "image": "https://i.ibb.co/bR5fHgMn/iced-coffe.jpg",
       "ingredients": [
         "Instant coffee",
@@ -132,7 +132,7 @@
     {
       "id": "6313",
       "title": "Bison Burger",
-      "description": "American bison burger made with ground buffalo meat and seasoned with sage",
+      "description": "American bison burger made with buffalo meat.",
       "image": "https://i.ibb.co/JRNz7FQN/burger.webp",
       "ingredients": [
         "2 pounds ground bison",
@@ -145,24 +145,76 @@
       "instructions": "Sauté the onions in olive oil over medium-high heat until translucent. Turn off the heat and let them cool.\n\nMix onions, sage, salt, pepper into ground bison meat:\nOnce the onions are cool enough to touch, use your (clean) hands to gently mix them with the bison burger meat, adding the sage, salt, and pepper. Do not overwork the meat, as this will make the burgers tough—just fold everything together until well-mixed.\n\nForm patties:\nForm patties with the meat, using about 1/4 to 1/3 of a pound of meat per patty. Tip: Press a slight indentation in the center of each patty to help them maintain a nice disk shape while cooking—otherwise, they might become egg-shaped as the edges contract.\n\nGrill or fry the burgers:\nGrill or fry the burgers on medium heat for about 6-7 minutes per side (adjust for thickness and heat), or until the internal temperature reaches 140°F for medium rare or 160°F for well done. If you trust the source of your ground meat (e.g., Whole Foods), you can cook the burgers rare or medium rare. Otherwise, cook them well done. Avoid pressing on the burgers during cooking, and minimize flipping.\n\nLet the burgers rest for about 5 minutes before serving."
     },
     {
-      "id": "9087",
-      "title": "sdasasas",
-      "description": "sd",
-      "image": "https://i.ibb.co/zTBgkC4F/ice-cream.webp",
+      "id": "48297",
+      "title": "Shakshuka ",
+      "description": "It's great for breakfast, lunch, or dinner.",
+      "image": "https://i.ibb.co/NgsT0zJp/shakshuka.webp",
       "ingredients": [
-        "sdsd"
+        "2 tablespoons olive oil",
+        "1 teaspoon  cumin",
+        "1/8 teaspoon red pepper ",
+        "1 large onion",
+        "2 cloves garlic",
+        "1 red bell pepper",
+        "salt",
+        "feta cheese",
+        "4 large eggs"
       ],
-      "instructions": "sdsd"
+      "instructions": "In a large skillet over medium heat, heat oil. Add paprika, cumin, and pepper flakes, and cook for 30 seconds to bloom the spices.\n\nAdd the onion and cook for 3 minutes, then add garlic, red, and yellow peppers. Cook for 15 minutes until the vegetables soften.\n\nBreak up the tomatoes in a bowl and add them to the skillet with salt. Cook for 5 minutes, then taste and adjust salt as needed.\n\nMake 4 indentations in the sauce with a spoon. Crack the eggs into the indentations and sprinkle feta and olives around them. Cover and cook for 8 minutes, or longer for firmer yolks."
     },
     {
-      "id": "76348",
-      "title": "asassd",
-      "description": "asas",
-      "image": "https://i.ibb.co/1GWzZQx6/Tiramisu.webp",
+      "id": "38692",
+      "title": "Beef Stew",
+      "description": "The Easiest Beef Stew You'll Love",
+      "image": "https://i.ibb.co/m5T8q9HW/beef.webp",
       "ingredients": [
-        "asas"
+        "2 pounds beef ",
+        "2 tablespoons flour",
+        "3/4 teaspoon salt",
+        "1/2 teaspoon paper",
+        "1-2 garlic ",
+        "1 large onion",
+        "2 large carrots",
+        "3 cups  water",
+        "3 tomato ",
+        "1/2 vinegar"
       ],
-      "instructions": "asasa"
+      "instructions": "Prepare the beef: Trim fat and connective tissue, cut into 1-inch chunks, and coat with flour, herb blend, salt, pepper, and garlic powder.\n\nAdd ingredients: Place onions, carrots, and potatoes in the pot. Whisk together boiling water, beef base, and tomato paste, then pour over the beef. Bring to a simmer.\n\nBake: Cover and bake for 2 hours. Remove lid and bake for another hour until the meat is tender.\n\nTip: For a soupier stew, cook with the lid on for 30-40 extra minutes, removing the lid for the last 20-30 minutes.\n\nFinish: Stir in peas and vinegar, cover for 5 minutes. Garnish with herbs and adjust seasoning.\n\nStore leftovers in an airtight container for up to 5 days or freeze for 3 months. Reheat gently, adding water if needed."
+    },
+    {
+      "id": "64085",
+      "title": "Retro Brownies",
+      "description": "It’s not Christmas without them.",
+      "image": "https://i.ibb.co/V0Fy1qQT/brown.webp",
+      "ingredients": [
+        "Cooking spray",
+        "1 stick butter",
+        "3 ounces cream cheese",
+        "1 pinch  salt",
+        "3/4 cups powdered sugar",
+        "1 tablespoon heavy cream",
+        "3 ounces chocolate"
+      ],
+      "instructions": "Preheat the oven and prep the pan: Preheat the oven according to the brownie mix package. Lightly spray an 8x8-inch pan with nonstick spray and line with parchment paper.\n\nPrepare the brownie layer: Prepare the brownie mix as directed, then pour the batter into the pan. Bake according to package directions and cool completely on a wire rack, about 1 hour.\n\nPrepare the mint cream layer: Beat butter, cream cheese, peppermint extract, and salt until smooth. Sift in powdered sugar, add heavy cream and food coloring (if using), and beat until fluffy. Spread over cooled brownies and refrigerate for 30-40 minutes until set.\n\nPrepare the ganache: Heat heavy cream in the microwave until hot. Add chopped chocolate, let sit for 1 minute, then stir until smooth. Let cool for 5 minutes.\n\nTop with ganache and chopped mints: Pour ganache over the mint layer, sprinkle with chopped mints (if using), and refrigerate until firm, at least 30 minutes.\n\nCut into squares and serve chilled. Store in an airtight container in the fridge for up to 1 week."
+    },
+    {
+      "id": "80660",
+      "title": "Chocolate Cake",
+      "description": "A quick, rich chocolate cake for any occasion.",
+      "image": "https://i.ibb.co/pBbZSPDq/chocolate.webp",
+      "ingredients": [
+        "2 cups flour",
+        "3/4 cups sugar",
+        "3/4 cups cacao powder",
+        "1 teaspoon salt",
+        "baking soda",
+        "2 large eggs",
+        "1 cup buttermilk",
+        "3/4 cup  canola oil",
+        "1 vanila powder",
+        "1 cup  coffee"
+      ],
+      "instructions": "Preheat the oven to 300°F and prepare two 9-inch round cake pans with parchment, butter, and flour.\n\nWhisk the dry ingredients: In a large bowl, combine flour, sugar, cocoa powder, baking soda, and salt.\n\nWhisk the wet ingredients: In a small bowl, mix eggs, buttermilk, oil, and vanilla.\n\nCombine the wet and dry ingredients: Stir wet ingredients into dry, then add hot coffee and mix until smooth.\n\nPour into pans and bake: Divide batter between pans and bake for 30 minutes or until a toothpick comes out clean. Cool cakes for 20 minutes, then remove from pans and let cool completely.\n\nFrost the cake: Frost the first layer, add the second cake, and crumb coat. Chill for 1 hour. Frost with remaining frosting and smooth the sides and top.\n\nDecorate: Use an offset spatula to create a spiral swirl on top, pipe blobs around the edge, and finish with silver pearls and powdered sugar."
     }
   ]
 }

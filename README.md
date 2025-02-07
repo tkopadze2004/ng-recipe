@@ -99,7 +99,13 @@ git clone https://github.com/tkopadze2004/ng-recipe
 npm install
 ```
 
-### 3. Start the Backend Server
+### 3. Build the project:
+
+```sh
+ng build
+```
+
+### 4. Start the Backend Server
 
 Run json-server with:
 
@@ -113,13 +119,13 @@ Or manually:
 json-server --watch db.json --port 3000
 ```
 
-### 3. Start the Angular Application
+### 5. Start the Angular Application
 
 ```sh
 ng serve
 ```
 
-### 4. Access the Application
+### 6. Access the Application
 
 Open your browser and visit:
 

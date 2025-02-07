@@ -22,7 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Data, Router } from '@angular/router';
 import {
   catchError,
   map,
@@ -93,8 +93,8 @@ export class CreateEditRecipeComponent implements OnDestroy {
   }
 
   // Handles file upload and updates form with image URL
-  public onFileChange(event: any): void {
-    const file = event.target.files[0];
+  public onFileChange(event: Data): void {
+    const file = event['target'].files[0];
     if (!file) return;
 
     this.isLoading = true;
@@ -103,7 +103,7 @@ export class CreateEditRecipeComponent implements OnDestroy {
       .uploadImage(file)
       .pipe(
         tap((data) => {
-          const imageUrl = data?.data?.image?.url || data?.data?.url;
+          const imageUrl = data?.['data']?.image?.url || data?.['data']?.url;
 
           if (imageUrl) {
             this.form.patchValue({ image: imageUrl });
@@ -165,50 +165,33 @@ export class CreateEditRecipeComponent implements OnDestroy {
     const { id, title, description, image, ingredients, instructions } =
       this.form.value;
 
-    if (id) {
-      this.recipeService
-        .updateRecipe({
-          id,
-          title,
-          description,
-          image,
-          ingredients,
-          instructions,
-        } as IRecipe)
-        .pipe(
-          catchError(({ error }) => {
-            this.openSnackBar(`${error.message},try again later!`);
-            return throwError(() => error.message);
-          }),
-          takeUntil(this.sub$)
-        )
-        .subscribe(() => {
-          this.openSnackBar('Recipe updated successfully!');
-          this.router.navigate(['/']);
-        });
-    } else {
-      const randomid = Math.round(Math.random() * 100000);
-      this.recipeService
-        .addRecipe({
-          id: String(randomid),
-          title,
-          description,
-          image,
-          ingredients,
-          instructions,
-        } as IRecipe)
-        .pipe(
-          catchError(({ error }) => {
-            this.openSnackBar(`${error.message},try again later!`);
-            return throwError(() => error.message);
-          }),
-          takeUntil(this.sub$)
-        )
-        .subscribe(() => {
-          this.openSnackBar('Recipe added successfully!');
-          this.router.navigate(['/']);
-        });
-    }
+    const recipe: IRecipe = {
+      id: id ? id : String(Math.round(Math.random() * 100000)),
+      title,
+      description,
+      image,
+      ingredients,
+      instructions,
+    };
+
+    const action = id
+      ? this.recipeService.updateRecipe(recipe)
+      : this.recipeService.addRecipe(recipe);
+
+    action
+      .pipe(
+        catchError(({ error }) => {
+          this.openSnackBar(`${error.message}, try again later!`);
+          return throwError(() => error.message);
+        }),
+        takeUntil(this.sub$)
+      )
+      .subscribe(() => {
+        this.openSnackBar(
+          id ? 'Recipe updated successfully!' : 'Recipe added successfully!'
+        );
+        this.router.navigate(['/']);
+      });
   }
 
   // Displays a message using Angular Material Snackbar
