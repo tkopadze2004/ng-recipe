@@ -1,27 +1,135 @@
-# NgRecipe
+# Recipe Sharing Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+## Overview
 
-## Development server
+The Recipe Sharing Application is a web application built with Angular 18 that allows users to create, view, edit, and delete recipes. It demonstrates core Angular concepts such as components, services, routing, and forms while ensuring a responsive UI using Angular Material.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+### 1. Home Page (Recipe List & Search)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Displays a list of available recipes with titles, short descriptions, and thumbnail images.
+- Includes a search bar to filter recipes by title or ingredients.
 
-## Build
+### 2. Recipe Details Page
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Displays full details of a selected recipe, including ingredients and cooking instructions.
 
-## Running unit tests
+### 3. Adding Recipes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Users can submit new recipes through a dedicated form.
+- The form includes fields for:
+  - Title
+  - Description
+  - Ingredients
+  - Instructions
+  - Thumbnail Image Upload (via ImgBB)
+- Uses Angular Reactive Forms for proper form handling and validation.
 
-## Running end-to-end tests
+### 4. Editing & Deleting Recipes
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Users have the ability to edit or delete recipes.
 
-## Further help
+### 5. Routing & Navigation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Uses Angular Router to navigate between different pages:
+  - Home Page (Recipe List)
+  - Recipe Details Page
+  - Recipe Create/Edit Page
+- A layout component loads the router outlet and header.
+- A 404 Not Found page handles unmatched routes.
+
+### 6. UI & Notifications
+
+- Uses Angular Material for UI components, including buttons and Snackbar notifications.
+- Fully responsive design.
+
+### 7. Image Upload
+
+- ImgBB is integrated for dynamic image uploads.
+
+### 8. Validation & Error Handling
+
+- Form validation ensures all required fields are correctly filled before submission.
+- Displays appropriate error messages when needed.
+
+## Technical Details
+
+### 1. Application Structure
+
+- **Home Page:** Displays the recipe list and includes a search bar.
+- **Recipe Details Page:** Shows the full recipe information.
+- **Recipe Create/Edit Page:** Allows users to add or edit recipes.
+- **Layout Component:** Contains the router outlet and header.
+
+### 2. Components
+
+- **Recipe List:** Displays all recipes.
+- **Recipe Details:** Shows individual recipe information.
+- **Recipe Form:** Handles adding/editing recipes.
+- **Shared Card Component:** Displays individual recipe items.
+- Data Flow: Uses `Input()` and `Output()` signals for data flow between components.
+
+### 3. Services
+
+- **RecipeService** manages:
+
+  - Fetching, adding, editing, and deleting recipes.
+  - Interaction with a mock backend (json-server).
+
+- **ImageService** manages:
+  - Upload Image: A method to upload an image to ImgBB.
+
+### 4. Mock Backend
+
+- Uses **json-server** to simulate a backend data store.
+
+## How to Run the Project
+
+### 1.Clone the repository:
+
+```sh
+git clone https://github.com/tkopadze2004/ng-recipe
+```
+
+### 2. Install Dependencies
+
+```sh
+npm install
+```
+
+### 3. Start the Backend Server
+
+Run json-server with:
+
+```sh
+npm run server
+```
+
+Or manually:
+
+```sh
+json-server --watch db.json --port 3000
+```
+
+### 3. Start the Angular Application
+
+```sh
+ng serve
+```
+
+### 4. Access the Application
+
+Open your browser and visit:
+
+```
+http://localhost:4200
+```
+
+## Notes
+
+- The application follows Angular best practices for maintainability and scalability.
+- The UI is built using Angular Material for a clean and intuitive design.
+- ImgBB API: The application uploads images to the [ImgBB API](https://imgbb.com/) and receives a link for each uploaded image. Visit their website for more details."
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page. 🚀🚀
