@@ -13,7 +13,7 @@ export class RecipeService extends ApiService {
   }
 
   // Fetches a specific recipe by ID
-  getRecipeById(id: number): Observable<IRecipe> {
+  getRecipeById(id: string): Observable<IRecipe> {
     return this.get<IRecipe>(`recipes/${id}`);
   }
 
@@ -24,7 +24,7 @@ export class RecipeService extends ApiService {
 
   // Updates an existing recipe
   updateRecipe(recipe: IRecipe): Observable<IRecipe> {
-    return this.put<IRecipe>(`recipes/${recipe.id}`, recipe);
+    return this.put<IRecipe>(`recipes/${recipe._id}`, recipe);
   }
 
   // Deletes a recipe by its ID

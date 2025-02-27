@@ -137,7 +137,14 @@ export class CreateEditRecipeComponent implements OnDestroy {
       if (id) {
         return this.recipeService.getRecipeById(id).pipe(
           tap((recipe: IRecipe) => {
-            this.form.patchValue(recipe);
+            this.form.patchValue({
+              id: recipe._id,
+              title: recipe.title,
+              description: recipe.description,
+              instructions: recipe.instructions,
+              ingredients: recipe.ingredients,
+              image: recipe.image,
+            });
             this.ingredients.clear();
             recipe.ingredients.forEach((ingredient) => {
               this.ingredients.push(
@@ -147,7 +154,7 @@ export class CreateEditRecipeComponent implements OnDestroy {
           })
         );
       }
-      return of();
+      return of(); 
     })
   );
 
@@ -160,7 +167,6 @@ export class CreateEditRecipeComponent implements OnDestroy {
       this.form.value;
 
     const recipe: IRecipe = {
-      id: id ? id : String(Math.round(Math.random() * 100000)),
       title,
       description,
       image,
@@ -169,8 +175,8 @@ export class CreateEditRecipeComponent implements OnDestroy {
     };
 
     const action = id
-      ? this.recipeService.updateRecipe(recipe)
-      : this.recipeService.addRecipe(recipe);
+      ? this.recipeService.updateRecipe({ ...recipe, _id: id })
+      : this.recipeService.addRecipe(recipe as IRecipe);
 
     action
       .pipe(
