@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 
 // ApiService is the base service for making HTTP requests (GET, POST, PUT, DELETE) to the backend API.
 export class ApiService {
-  private jsonUrl = environment.jsonUrl; // API base URL
+  private jsonUrl = environment.apiUrl; // API base URL
 
   private http: HttpClient = inject(HttpClient); // HttpClient injection
 
