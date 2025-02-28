@@ -23,8 +23,8 @@ export class RecipeService extends ApiService {
   }
 
   // Updates an existing recipe
-  updateRecipe(recipe: IRecipe): Observable<IRecipe> {
-    return this.put<IRecipe>(`recipes/${recipe._id}`, recipe);
+  updateRecipe(id: string, recipe: IRecipe): Observable<IRecipe> {
+    return this.put<IRecipe>(`recipes/${id}`, recipe);
   }
 
   // Deletes a recipe by its ID

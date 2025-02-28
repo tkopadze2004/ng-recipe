@@ -175,7 +175,7 @@ export class CreateEditRecipeComponent implements OnDestroy {
     };
 
     const action = id
-      ? this.recipeService.updateRecipe({ ...recipe, _id: id })
+      ? this.recipeService.updateRecipe(id,recipe)
       : this.recipeService.addRecipe(recipe as IRecipe);
 
     action
