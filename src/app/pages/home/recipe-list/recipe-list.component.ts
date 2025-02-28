@@ -9,14 +9,23 @@ import {
   combineLatest,
   map,
   startWith,
+  switchMap,
+  of,
+  catchError,
 } from 'rxjs';
 import { IRecipe } from '../../../core/interfaces/recipe.interface';
 import { FormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-recipe-list',
   standalone: true,
-  imports: [AsyncPipe, RecipeCardComponent, FormsModule],
+  imports: [
+    AsyncPipe,
+    RecipeCardComponent,
+    FormsModule,
+    MatProgressSpinnerModule,
+  ],
   templateUrl: './recipe-list.component.html',
   styleUrl: './recipe-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -24,7 +33,17 @@ import { FormsModule } from '@angular/forms';
 export class RecipeListComponent {
   private readonly recipeService: RecipeService = inject(RecipeService);
   public searchItem: string = '';
-  public recipes$: Observable<IRecipe[]> = this.recipeService.getRecipes();
+  public isLoading: boolean = true;
+  public recipes$: Observable<IRecipe[]> = this.recipeService.getRecipes().pipe(
+    switchMap((recipes) => {
+      this.isLoading = false;
+      return of(recipes);
+    }),
+    catchError((error) => {
+      this.isLoading = false;
+      return of([]);
+    })
+  );
   private searchQuery$ = new BehaviorSubject<string>('');
   private readonly router: Router = inject(Router);
 
