@@ -82,6 +82,13 @@
   }
 }
 
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+
 @media (max-width: 1024px) {
   .recipe {
     gap: 25px;
@@ -109,10 +116,9 @@
         ul {
           gap: 5px;
 
-  font-size: 13px;
+          font-size: 13px;
           li::marker {
             font-size: 16px;
-
           }
         }
       }
@@ -122,7 +128,7 @@
     }
     &__instruction {
       padding: 0 10px;
-      h1{
+      h1 {
         font-size: 24px;
       }
       p {
@@ -153,7 +159,6 @@
         ul {
           gap: 7px;
           font-size: 12px;
-
         }
         li::marker {
           font-size: 14px;
@@ -166,7 +171,6 @@
       width: 100%;
     }
     &__instruction {
-
       p {
         font-size: 14px;
       }

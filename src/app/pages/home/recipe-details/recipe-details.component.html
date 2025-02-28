@@ -1,4 +1,7 @@
-@if (recipe$ | async; as recipe) {
+@if(isLoading){
+<div class="loading"><mat-spinner></mat-spinner></div>
+} @if (recipe$ | async; as recipe) {
+
 <!-- Recipe container -->
 <div class="recipe">
   <!-- Recipe Image Section -->
